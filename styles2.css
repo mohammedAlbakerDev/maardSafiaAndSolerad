@@ -8,27 +8,26 @@
     --spacing: 1rem;
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     --gradient: linear-gradient(135deg, #74b9ff 0%, #00cec9 100%);
-}
-
-* {
+  }
+  
+  * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-body {
+  }
+  
+  body {
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
     color: var(--text-color);
     background: var(--gradient);
     line-height: 1.6;
     min-height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
-}
-
-.container {
-    width: 100%;
+    align-items: center;
+  }
+  
+  .container {
     max-width: 100%;
     margin: 0 auto;
     padding: var(--spacing);
@@ -36,13 +35,10 @@ body {
     min-height: 100vh;
     position: relative;
     backdrop-filter: blur(10px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-header {
+    text-align: center;
+  }
+  
+  header {
     text-align: center;
     padding: calc(var(--spacing) * 3) 0;
     background: linear-gradient(to right, var(--light-bg), white);
@@ -50,10 +46,9 @@ header {
     margin-bottom: calc(var(--spacing) * 2);
     position: relative;
     overflow: hidden;
-    width: 90%;
-}
-
-header::before {
+  }
+  
+  header::before {
     content: '';
     position: absolute;
     top: 0;
@@ -61,36 +56,36 @@ header::before {
     right: 0;
     height: 4px;
     background: var(--gradient);
-}
-
-.logo-container {
+  }
+  
+  .logo-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: calc(var(--spacing) * 1.5);
-}
-
-.logo {
+  }
+  
+  .logo {
     max-width: 80%;
     height: auto;
     border-radius: 12px;
     box-shadow: var(--shadow);
     transition: transform 0.3s ease;
-}
-
-.logo:hover {
+  }
+  
+  .logo:hover {
     transform: scale(1.02);
-}
-
-.company-title {
+  }
+  
+  .company-title {
     font-size: 1.8rem;
     color: var(--primary-color);
     font-weight: 700;
     letter-spacing: -0.5px;
     margin: 0;
-}
-
-.company-tagline {
+  }
+  
+  .company-tagline {
     color: var(--secondary-color);
     font-size: 1rem;
     font-weight: 500;
@@ -98,9 +93,18 @@ header::before {
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-top: calc(var(--spacing) * 0.5);
-}
-
-section {
+    direction: rtl;
+    unicode-bidi: embed;
+  }
+  
+  .spaced-word {
+    display: inline-block;
+    margin-left: 10px;
+    font-weight: bold;
+    direction: ltr;
+  }
+  
+  section {
     padding: calc(var(--spacing) * 2);
     margin-bottom: calc(var(--spacing) * 2);
     background: white;
@@ -108,38 +112,36 @@ section {
     box-shadow: var(--shadow);
     transition: all 0.3s ease;
     border: 1px solid var(--border-color);
-    width: 90%;
-    text-align: center;
-}
-
-section:hover {
+  }
+  
+  section:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 12px -1px rgba(0, 0, 0, 0.1);
-}
-
-.owner {
+  }
+  
+  .owner {
     text-align: center;
     background: linear-gradient(to bottom right, var(--light-bg), white);
-}
-
-h1 {
+  }
+  
+  h1 {
     color: var(--primary-color);
     font-size: 2.2rem;
     margin-bottom: calc(var(--spacing) / 2);
     font-weight: 700;
     letter-spacing: -0.5px;
-}
-
-h2 {
+  }
+  
+  h2 {
     color: var(--secondary-color);
     font-size: 1.4rem;
     margin-bottom: var(--spacing);
     font-weight: 600;
     position: relative;
     display: inline-block;
-}
-
-h2::after {
+  }
+  
+  h2::after {
     content: '';
     position: absolute;
     bottom: -4px;
@@ -148,22 +150,22 @@ h2::after {
     height: 3px;
     background: var(--accent-color);
     border-radius: 2px;
-}
-
-.role {
+  }
+  
+  .role {
     color: var(--secondary-color);
     font-size: 1.2rem;
     font-weight: 500;
     opacity: 0.9;
-}
-
-.contact-details {
+  }
+  
+  .contact-details {
     display: flex;
     flex-direction: column;
     gap: calc(var(--spacing) * 1.2);
-}
-
-.contact-item {
+  }
+  
+  .contact-item {
     display: flex;
     align-items: center;
     gap: calc(var(--spacing));
@@ -174,79 +176,74 @@ h2::after {
     border-radius: 12px;
     transition: all 0.3s ease;
     border: 1px solid transparent;
-}
-
-.contact-item:hover {
+  }
+  
+  .contact-item:hover {
     background-color: white;
     border-color: var(--accent-color);
     transform: translateX(5px);
     box-shadow: var(--shadow);
-}
-
-.icon {
+  }
+  
+  .icon {
     font-size: 1.4rem;
     color: var(--secondary-color);
     transition: transform 0.3s ease;
-}
-
-.contact-item:hover .icon {
+  }
+  
+  .contact-item:hover .icon {
     transform: scale(1.1);
-}
-
-.address-details {
+  }
+  
+  .address-details {
     text-align: center;
     line-height: 1.8;
-}
-
-.company-name {
+  }
+  
+  .company-name {
     font-weight: 600;
     color: var(--primary-color);
     margin-bottom: var(--spacing);
     font-size: 1.1rem;
-}
-
-.drive-button {
-    background-color: #4CAF50; /* Green background */
-    color: white; /* White text */
-    padding: 12px 24px; /* Padding for size */
-    font-size: 16px; /* Font size */
-    border: none; /* No border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer on hover */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
-    display: block;
-    margin: 0 auto;
-    width: 80%;
-    max-width: 250px;
-}
-
-.drive-button:hover {
-    background-color: #45a049; /* Darker green on hover */
-    transform: scale(1.05); /* Slightly increase size on hover */
-}
-
-.drive-button:active {
-    background-color: #3e8e41; /* Even darker green on click */
-    transform: scale(0.98); /* Slightly reduce size on click */
-}
-
-/* Media queries for mobile screens */
-@media (max-width: 767px) {
+  }
+  
+  .drive-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .drive-button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+  }
+  
+  .drive-button:active {
+    background-color: #3e8e41;
+    transform: scale(0.98);
+  }
+  
+  @media (max-width: 767px) {
     .container {
-        width: 95%;
+      max-width: 90%;
+      margin: 20px auto;
+      border-radius: 15px;
+      box-shadow: var(--shadow);
+      padding: var(--spacing);
     }
-
-    header {
-        width: 100%;
+  
+    .company-title {
+      font-size: 1.6rem;
     }
-
-    section {
-        width: 100%;
-        padding: calc(var(--spacing) * 1.5);
+  
+    h1 {
+      font-size: 1.8rem;
     }
-
-    .drive-button {
-        width: 100%;
-    }
-}
+  }
+  
